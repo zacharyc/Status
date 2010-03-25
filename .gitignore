@@ -1,0 +1,6 @@
+log/*
+tmp
+bin/*
+db/*.sqlite3
+config/database.yml
+config/application_config.rb
