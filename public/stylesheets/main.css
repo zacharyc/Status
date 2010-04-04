@@ -79,11 +79,15 @@ ol {
 }
 
 ol li.project {
-	padding:10px;
-	background:url('images/GrayGradient.png') #aaa;
+	margin:0;
+	padding:5px;
+	background:url('/images/GrayGradient.png') #aaa;
 	color:#000;
 	font-weight:bold;
-	-webkit-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px;
+	/*-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-radius: 10px 10px 0 0; */
 	-moz-border-radius: 10px 10px 0 0;
 	border-radius: 10px 10px 0 0;
 }
