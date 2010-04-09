@@ -16,7 +16,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to(:controller => "projects", :action => "show", :id => @note.project_id)}# show.html.erb
       format.xml  { render :xml => @note }
     end
   end
