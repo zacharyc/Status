@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 {
-	padding-left:10px;
+	/* Need to add specifics to this indentiation : padding-left:10px; */
 	display: inline;
 	color:#E47833;
 }

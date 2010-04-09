@@ -2,5 +2,8 @@
 <h1><%= @project.name %></h1> <br />
 
 <%= render :partial => "note_list", :locals => {:notes => @project.notes}%>
+
+<%= render :partial => "new_note", :locals => {:note => Note.new(:project_id => @project.id)} %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
