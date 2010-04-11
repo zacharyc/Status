@@ -92,6 +92,11 @@ ol li.project {
 	border-radius: 10px 10px 0 0;
 }
 
+ol li.project a{
+	width:650px;
+	display:block;
+}
+
 ul.notes {
 	background:#ddd;
 	border-left:1px dashed #000;
