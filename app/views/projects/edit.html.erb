@@ -3,6 +3,14 @@
 <% form_for(@project) do |f| %>
   <%= f.error_messages %>
 
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>		
+	</p>
+	
+	<p>
+		<%= f.label :active %>
+		<%= f.check_box :active %>
   <p>
     <%= f.submit 'Update' %>
   </p>
