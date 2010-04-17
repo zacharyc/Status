@@ -12,9 +12,9 @@ pre {
   font-size: 11px;
 }
 
-a { color: #ccc; }
-a:visited { color: #666; }
-a:hover { color: #060; }
+a { color: #F5B045; }
+a:visited { color: #F5B045; }
+a:hover { color: #7CAB36; }
 
 .fieldWithErrors {
   padding: 2px;
@@ -70,7 +70,7 @@ h1 {
 h2 {
 	/* Need to add specifics to this indentiation : padding-left:10px; */
 	display: inline;
-	color:#E47833;
+	color:#B84C13;
 }
 
 ol {
@@ -95,15 +95,38 @@ ol li.project {
 ol li.project a{
 	width:650px;
 	display:block;
+	text-decoration: none;
+	color:#222;
 }
 
+ol li.project a:hover {
+	color: #000;
+}
+
+ol li.project a:visited {
+	color: #333;
+}
+
+ol li.project:hover {
+	color: #B84C13;
+	border: 2px solid #B84C13;
+}
+
+
 ul.notes {
-	background:#ddd;
+	list-style:none;
+	padding-left: 5em;
+/*	background:#ddd;
 	border-left:1px dashed #000;
 	border-right:1px dashed #000;
-	color:#000;
+	color:#000; */
+}
+
+ul.notes li.note {
+	padding-top:.5em;
+	text-indent: -5em;
 }
 
 ul li.note span {
-	color:#E47833;
+	color:#B84C13;
 }

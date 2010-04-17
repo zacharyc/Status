@@ -1,4 +1,4 @@
-<ul>
+<ul class="notes">
 <% for note in notes %>
 	<li class="note"><span><%= note.created_at.strftime("%m/%d/%y") %></span> <%= note.content %></li>
 <% end %>
