@@ -53,21 +53,25 @@ a:hover { color: #7CAB36; }
 }
 
 body {
+	margin:0;
+	padding:0;
 	background:#1f1f1f;
 	color:#ccc;
 	font-family: verdana, Helvetica, Arial, serif;
 }
 
 .container {
-	margin: 10px auto;
+	margin: 0px auto;
 	width:650px;
 }
 
 h1 {
+	margin-top:10px;
 	display: inline;
 }
 
 h2 {
+	margin-top:10px;
 	/* Need to add specifics to this indentiation : padding-left:10px; */
 	display: inline;
 	color:#B84C13;
@@ -129,4 +133,21 @@ ul.notes li.note {
 
 ul li.note span {
 	color:#B84C13;
+}
+
+ul#nav {
+	margin:0;
+	padding:10px;
+	background:#333;
+	list-style:none;
+	float:right;
+	
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+ul#nav li {
+	padding-top:0;
+	margin-top:0;
+	display:inline;
 }
