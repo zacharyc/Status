@@ -1,7 +1,7 @@
 
 <h1><%= @project.name %></h1> <br />
 
-<p style="color: green"><%= flash[:notice] %></p>
+<p style="color: #F5B045"><%= flash[:notice] %></p>
 
 <%= render :partial => "note_list", :locals => {:notes => @project.notes}%>
 
