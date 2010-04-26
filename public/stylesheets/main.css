@@ -151,3 +151,25 @@ ul#nav li {
 	margin-top:0;
 	display:inline;
 }
+
+#logout_form {
+	display:inline;
+}
+
+#logout_button {
+	padding-left:0;
+	font-size:1em;
+	text-decoration:underline;
+	color:#F5B045;
+	background:#333;
+	border:none;
+	display:inline;
+}
+
+#logout_button:hover {
+	color: #7CAB36;
+}
+
+a { color: #F5B045; }
+a:visited { color: #F5B045; }
+a:hover { color: #7CAB36; }

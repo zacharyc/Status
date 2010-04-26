@@ -13,7 +13,17 @@
 <ul id="nav">
 	<li><%= link_to "Home", :controller => :projects, :action => :index %></li>
 	<li><%= link_to "Show All", :controller => :projects, :action => :index, :params => {:show_all => true}%></li>
-	<li><%= link_to "login" %></li>
+	<li>
+		<% if session[:logged_in] == true %>
+			<form action="<%= session_url %>" method="post" accept-charset="utf-8" id="logout_form">
+				<input type="hidden" name="_method" value="delete" id="_method">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" id="authenticity_token">
+				<input type="submit" value="Logout &rarr;" id="logout_button">
+			</form>
+		<% else %>
+			<%= link_to "login", new_session_url %>
+		<% end %>
+	</li>
 </ul>
 
 <br />
