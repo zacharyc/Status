@@ -24,6 +24,10 @@ class NotesController < ApplicationController
   # GET /notes/new
   # GET /notes/new.xml
   def new
+    if !logged_in
+      return
+    end
+    
     @note = Note.new
 
     respond_to do |format|
@@ -34,12 +38,20 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
+    if !logged_in
+      return
+    end
+    
     @note = Note.find(params[:id])
   end
 
   # POST /notes
   # POST /notes.xml
   def create
+    if !logged_in
+      return
+    end
+      
     @note = Note.new(params[:note])
 
     respond_to do |format|
@@ -57,6 +69,10 @@ class NotesController < ApplicationController
   # PUT /notes/1
   # PUT /notes/1.xml
   def update
+    if !logged_in
+      return
+    end
+    
     @note = Note.find(params[:id])
 
     respond_to do |format|
@@ -74,6 +90,10 @@ class NotesController < ApplicationController
   # DELETE /notes/1
   # DELETE /notes/1.xml
   def destroy
+    if !logged_in
+      return
+    end
+    
     @note = Note.find(params[:id])
     @note.destroy
 

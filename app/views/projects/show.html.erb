@@ -5,7 +5,11 @@
 
 <%= render :partial => "note_list", :locals => {:notes => @project.notes}%>
 
-<%= render :partial => "new_note", :locals => {:note => Note.new(:project_id => @project.id)} %>
+<% if logged_in %>
+	<%= render :partial => "new_note", :locals => {:note => Note.new(:project_id => @project.id)} %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+	<%= link_to 'Edit', edit_project_path(@project) %> |
+<% end %>
+
+
 <%= link_to 'Back', projects_path %>
