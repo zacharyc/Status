@@ -12,9 +12,14 @@
 
 <ul id="nav">
 	<li><%= link_to "Home", :controller => :projects, :action => :index %></li>
-	<li><%= link_to "Show All", :controller => :projects, :action => :index, :params => {:show_all => true}%></li>
+	
+	<% if session[:show_all] == true %>
+		<li><%= link_to "Show Active", :controller => :projects, :action => :index, :params => {:show_all => false}%></li>	
+	<% else %>
+		<li><%= link_to "Show All", :controller => :projects, :action => :index, :params => {:show_all => true}%></li>
+	<% end %>
+	
 	<li>
-		<% #if session[:logged_in] == true %>
 		<% if logged_in %>
 			<form action="<%= session_url %>" method="post" accept-charset="utf-8" id="logout_form">
 				<input type="hidden" name="_method" value="delete" id="_method">

@@ -2,7 +2,14 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.xml
   def index
-    @projects = Project.all
+    session[:show_all] = params[:show_all] == "true"
+    if session[:show_all] == true
+      puts "In the show all is true"
+      @projects = Project.all
+    else
+      puts "************* is false ****************"
+      @projects = Project.find(:all, :conditions => ['active=?', true])
+    end
 
     respond_to do |format|
       format.html # index.html.erb
