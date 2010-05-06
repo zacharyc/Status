@@ -1,5 +1,11 @@
 <ul class="notes">
 <% for note in notes %>
-	<li class="note"><span><%= note.created_at.strftime("%m/%d/%y") %></span> <%= note.content %></li>
+	<li class="note">
+		<span><%= note.created_at.strftime("%m/%d/%y") %></span> 
+		<%= note.content %>
+		<% if logged_in %>
+			<%= link_to "Edit", edit_note_path(note) %>
+		<% end %>
+	</li>
 <% end %>
 </ul>
