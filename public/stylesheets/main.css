@@ -88,6 +88,7 @@ ol li.project {
 	background:url('/images/GrayGradient.png') #aaa;
 	color:#000;
 	font-weight:bold;
+	border: 2px solid #1f1f1f;
 	-webkit-border-radius: 10px;
 	/*-webkit-border-bottom-right-radius: 0px;
 	-webkit-border-bottom-left-radius: 0px;
